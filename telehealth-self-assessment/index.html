@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6F4E37">
+  <title>Ruang Sehat — Self Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="dashboard">
+        <span class="brand-mark">✦</span><span>ruang<span class="brand-dot">sehat.</span></span>
+      </a>
+      <div class="side-label">MENU</div>
+      <nav class="nav">
+        <button class="nav-link active" data-page="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button class="nav-link" data-page="forms"><span class="nav-icon">▤</span>Mulai Assessment</button>
+        <button class="nav-link" data-page="history"><span class="nav-icon">◷</span>Riwayat</button>
+        <button class="nav-link" data-page="results"><span class="nav-icon">▧</span>Hasil & Status</button>
+        <button class="nav-link" data-page="clarifications"><span class="nav-icon">✉</span>Klarifikasi <span id="clarification-count" class="nav-count" hidden>0</span></button>
+        <button class="nav-link" data-page="followup"><span class="nav-icon">♡</span>Tindak Lanjut</button>
+        <button class="nav-link" data-page="uts"><span class="nav-icon">✓</span>Bukti Fitur UTS</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">♡</span><strong>Jaga kesehatanmu</strong><p>Isi assessment dengan jujur dan sesuai kondisi.</p></div>
+        <button class="nav-link" data-page="settings"><span class="nav-icon">⚙</span>Pengaturan</button>
+        <div class="side-foot">Telehealth Self-Assessment <span>Patient Portal</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu">☰</button>
+        <div class="breadcrumb">Patient Portal <span>/</span> <b id="page-label">Dashboard</b></div>
+        <div class="top-actions">
+          <span class="connection-dot" id="connection-dot"></span>
+          <span class="connection-text" id="connection-text">Belum terhubung</span>
+          <div class="avatar" id="avatar">T</div>
+        </div>
+      </header>
+
+      <section class="content" id="app-content" aria-live="polite"></section>
+      <footer class="footer">© 2026 Ruang Sehat <span>Hasil assessment bukan merupakan diagnosis medis.</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="overlay" id="overlay"></div>
+  <script src="app.js"></script>
+</body>
+</html>
